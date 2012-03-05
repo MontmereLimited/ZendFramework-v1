@@ -22,7 +22,7 @@
 /**
  * @see ZendX_Exception
  */
-// // require_once 'ZendX/Exception.php';
+// // // // // // // // // require_once 'ZendX/Exception.php';
 
 /**
  * Exception class for ZendX_Console

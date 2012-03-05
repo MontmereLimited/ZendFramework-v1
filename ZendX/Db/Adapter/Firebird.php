@@ -23,22 +23,22 @@
 /**
  * @see Zend_Db_Adapter_Abstract
  */
-// // require_once 'Zend/Db/Adapter/Abstract.php';
+// // // // // // // // // require_once 'Zend/Db/Adapter/Abstract.php';
 
 /**
  * @see Zend_Db_Profiler
  */
-// // require_once 'Zend/Db/Profiler.php';
+// // // // // // // // // require_once 'Zend/Db/Profiler.php';
 
 /**
  * @see Zend_Db_Select
  */
-// // require_once 'Zend/Db/Select.php';
+// // // // // // // // // require_once 'Zend/Db/Select.php';
 
 /**
  * @see Zend_Db_Statement_Firebird
  */
-// // require_once 'ZendX/Db/Statement/Firebird.php';
+// // // // // // // // // require_once 'ZendX/Db/Statement/Firebird.php';
 
 
 /**
@@ -284,7 +284,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
             /**
              * @see ZendX_Db_Adapter_Firebird_Exception
              */
-            // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
             throw new ZendX_Db_Adapter_Firebird_Exception('The Interbase extension is required for this adapter but the extension is not loaded');
         }
 
@@ -305,7 +305,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
             /**
              * @see ZendX_Db_Adapter_Firebird_Exception
              */
-            // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
             throw new ZendX_Db_Adapter_Firebird_Exception(ibase_errmsg());
         }
     }
@@ -405,7 +405,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
             /**
              * @see ZendX_Db_Adapter_Firebird_Exception
              */
-            // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
             throw new ZendX_Db_Adapter_Firebird_Exception(ibase_errmsg());
         }
         $this->_transResource = null;
@@ -422,7 +422,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
             /**
              * @see ZendX_Db_Adapter_Firebird_Exception
              */
-            // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
             throw new ZendX_Db_Adapter_Firebird_Exception(ibase_errmsg());
         }
         $this->_transResource = null;
@@ -450,7 +450,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
                 /**
                  * @see ZendX_Db_Adapter_Firebird_Exception
                  */
-                // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+                // // // // // // // // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
                 throw new ZendX_Db_Adapter_Firebird_Exception("Invalid fetch mode '$mode' specified");
         }
     }
@@ -471,7 +471,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
             /**
              * @see ZendX_Db_Adapter_Firebird_Exception
              */
-            // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
             throw new ZendX_Db_Adapter_Firebird_Exception("LIMIT argument count=$count is not valid");
         }
 
@@ -480,7 +480,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
             /**
              * @see ZendX_Db_Adapter_Firebird_Exception
              */
-            // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
             throw new ZendX_Db_Adapter_Firebird_Exception("LIMIT argument offset=$offset is not valid");
         }
 

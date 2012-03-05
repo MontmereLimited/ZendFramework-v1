@@ -23,7 +23,7 @@
 /**
  * @see Zend_Db_Adapter_Exception
  */
-// // require_once 'Zend/Db/Adapter/Exception.php';
+// // // // // // // // // require_once 'Zend/Db/Adapter/Exception.php';
 
 /**
  * ZendX_Db_Adapter_Firebird_Exception

@@ -144,19 +144,19 @@ abstract class ZendX_Console_Process_Unix
     public function __construct($puid = null, $guid = null, $umask = null)
     {
         if (substr(PHP_OS, 0, 3) === 'WIN') {
-            // // require_once 'ZendX/Console/Process/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Console/Process/Exception.php';
             throw new ZendX_Console_Process_Exception('Cannot run on windows');
         } else if (!in_array(substr(PHP_SAPI, 0, 3), array('cli', 'cgi'))) {
-            // // require_once 'ZendX/Console/Process/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Console/Process/Exception.php';
             throw new ZendX_Console_Process_Exception('Can only run on CLI or CGI enviroment');
         } else if (!function_exists('shmop_open')) {
-            // // require_once 'ZendX/Console/Process/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Console/Process/Exception.php';
             throw new ZendX_Console_Process_Exception('shmop_* functions are required');
         } else if (!function_exists('pcntl_fork')) {
-            // // require_once 'ZendX/Console/Process/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Console/Process/Exception.php';
             throw new ZendX_Console_Process_Exception('pcntl_* functions are required');
         } else if (!function_exists('posix_kill')) {
-            // // require_once 'ZendX/Console/Process/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Console/Process/Exception.php';
             throw new ZendX_Console_Process_Exception('posix_* functions are required');
         }
     
@@ -207,7 +207,7 @@ abstract class ZendX_Console_Process_Unix
     public function start()
     {
         if (!$this->_ipcIsOkay) {
-            // // require_once 'ZendX/Console/Process/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Console/Process/Exception.php';
             throw new ZendX_Console_Process_Exception('Unable to create SHM segments for process communications');
         }
 
@@ -218,7 +218,7 @@ abstract class ZendX_Console_Process_Unix
 
         $pid = @pcntl_fork();
         if ($pid === -1) {
-            // // require_once 'ZendX/Console/Process/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Console/Process/Exception.php';
             throw new ZendX_Console_Process_Exception('Forking process failed');
         } else if ($pid === 0) {
             // This is the child
@@ -305,7 +305,7 @@ abstract class ZendX_Console_Process_Unix
     public function setVariable($name, $value)
     {
         if ($name[0] === '_') {
-            // // require_once 'ZendX/Console/Process/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Console/Process/Exception.php';
             throw new ZendX_Console_Process_Exception('Only internal functions may use underline (_) as variable prefix');
         }
 
@@ -562,7 +562,7 @@ abstract class ZendX_Console_Process_Unix
                                         shmop_size($this->_internalIpcKey));
 
         if ($serializedIpcData === false) {
-            // // require_once 'ZendX/Console/Process/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Console/Process/Exception.php';
             throw new ZendX_Console_Process_Exception('Fatal error while reading SHM segment');
         }
 
@@ -597,7 +597,7 @@ abstract class ZendX_Console_Process_Unix
 
         // Check if lenght of SHM segment is enougth to contain data
         if ($shmBytesWritten !== strlen($serializedIpcData)) {
-            // // require_once 'ZendX/Console/Process/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Console/Process/Exception.php';
             throw new ZendX_Console_Process_Exception('Fatal error while writing to SHM segment');
         }
     }
@@ -615,7 +615,7 @@ abstract class ZendX_Console_Process_Unix
 
         $shmKey = ftok($this->_ipcSegFile, 't');
         if ($shmKey === -1) {
-            // // require_once 'ZendX/Console/Process/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Console/Process/Exception.php';
             throw new ZendX_Console_Process_Exception('Could not create SHM segment');
         }
 
@@ -642,7 +642,7 @@ abstract class ZendX_Console_Process_Unix
 
         $semKey = ftok($this->_ipcSemFile, 't');
         if ($semKey === -1) {
-            // // require_once 'ZendX/Console/Process/Exception.php';
+            // // // // // // // // // require_once 'ZendX/Console/Process/Exception.php';
             throw new ZendX_Console_Process_Exception('Could not create semaphore');
         }
 

@@ -23,12 +23,12 @@
 /**
  * @see Zend_Cache_Backend_Interface
  */
-// // require_once 'Zend/Cache/Backend/Interface.php';
+// // // // // // // // require_once 'Zend/Cache/Backend/Interface.php';
 
 /**
  * @see Zend_Cache_Backend
  */
-// // require_once 'Zend/Cache/Backend.php';
+// // // // // // // // require_once 'Zend/Cache/Backend.php';
 
 /**
  * @package    Zend_Cache
@@ -224,7 +224,6 @@ class Zend_Cache_Backend_Static
 
         $pathName = realpath($this->_options['public_dir']) . dirname($id);
         $this->_createDirectoriesFor($pathName);
-
         if ($id === null || strlen($id) == 0) {
             $dataUnserialized = unserialize($data);
             $data = $dataUnserialized['data'];
